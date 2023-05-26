@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="shortcut icon" href="assets/img/bg_form.png" type="image/x-icon">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="estilo.css" />
+    <title>AGENDA BOT - AUTOMATIZANDO AGENDAMENTOS</title>
+    <link rel="stylesheet" href="./assets/css/estilo.css" />
   </head>
   <script
     src="https://kit.fontawesome.com/484246aeda.js"
     crossorigin="anonymous"
   ></script>
-  <script src="index.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto"
+    rel="stylesheet"
+  />
   <body>
-    <div class="container">
+    <form class="container" method="get" action="teste.php">
       <div class="div-1 container-input">
+        <img src="assets/img/bg_form.png" alt="" srcset="" />
         <div class="nivel">
-          <a href="">1</a>
+          <a onclick="handleDiv(1)">1</a>
           <span></span>
-          <a href="" style="background-color: #fff; color: orange">2</a>
+          <a
+            style="background-color: #fff; color: orange"
+            onclick="handleDiv(2)"
+            >2</a
+          >
           <span></span>
-          <a href="" style="background-color: #fff; color: orange">3</a>
+          <a
+            style="background-color: #fff; color: orange"
+            onclick="handleDiv(3)"
+            >3</a
+          >
         </div>
 
         <h3>AGENDA BOT - AUTOMATIZANDO AGENDAMENTOS</h3>
@@ -30,29 +46,31 @@
           <div></div>
         </div>
 
+        <div class="validate"></div>
+
         <label for="nome">
           <i class="fa-regular fa-user" style="color: gray"></i>
-          <input type="text" name="nome" id="nome" placeholder="Nome" />
+          <input type="text" name="namepes" id="namepes" placeholder="Nome" />
         </label>
         <label for="nome_empresa">
           <i class="fa-solid fa-sitemap" style="color: gray"></i>
           <input
             type="text"
-            name="nome_empresa"
-            id="nome_empresa"
+            name="nfantasia"
+            id="nfantasia"
             placeholder="Nome da Empresa"
           />
         </label>
         <label for="email">
           <i class="fa-regular fa-envelope-open" style="color: gray"></i>
-          <input type="email" name="email" id="email" placeholder="Email" />
+          <input type="text" name="email" id="email" placeholder="Email" />
         </label>
         <label for="telefone_empresa">
           <i class="fa-brands fa-whatsapp" style="color: gray"></i>
           <input
             type="tel"
-            name="telefone_empresa"
-            id="telefone_empresa"
+            name="nzapemp"
+            id="nzapemp"
             placeholder="Número Whatsapp da empresa"
           />
         </label>
@@ -60,8 +78,8 @@
           <i class="fa-brands fa-whatsapp" style="color: gray"></i>
           <input
             type="tel"
-            name="telefone_pessoal"
-            id="telefone_pessoal"
+            name="telefone"
+            id="telefone"
             placeholder="Número Whatsapp pessoal(caso possua)"
           />
         </label>
@@ -69,12 +87,17 @@
       </div>
 
       <div class="div-2 container-input" style="display: none">
+        <img src="assets/img/bg_form.png" alt="" srcset="" />
         <div class="nivel">
-          <a href="">1</a>
+          <a onclick="handleDiv(1)">1</a>
           <span style="background-color: orange"></span>
-          <a href="">2</a>
+          <a onclick="handleDiv(2)">2</a>
           <span></span>
-          <a href="" style="background-color: #fff; color: orange">3</a>
+          <a
+            style="background-color: #fff; color: orange"
+            onclick="handleDiv(3)"
+            >3</a
+          >
         </div>
 
         <h3>AGENDA BOT - AUTOMATIZANDO AGENDAMENTOS</h3>
@@ -83,6 +106,8 @@
           <p>Teste 30 dias grátis</p>
           <div></div>
         </div>
+
+        <div class="validate validate-2"></div>
 
         <label for="cep">
           <i class="fa-regular fa-user" style="color: gray"></i>
@@ -131,13 +156,18 @@
         <a onclick="handleDiv(1)" class="btn-voltar">Voltar</a>
       </div>
 
-      <div class="div-3 container-input" style="display: none">
+      <div
+        class="div-3 container-input"
+        style="display: none; justify-content: center"
+      >
+        <div class="validate"></div>
+        <img src="assets/img/bg_form.png" alt="" srcset="" />
         <div class="nivel">
-          <a href="">1</a>
+          <a onclick="handleDiv(1)">1</a>
           <span style="background-color: orange"></span>
-          <a href="">2</a>
+          <a onclick="handleDiv(2)">2</a>
           <span style="background-color: orange"></span>
-          <a href="">3</a>
+          <a onclick="handleDiv(3)">3</a>
         </div>
 
         <h3>AGENDA BOT - AUTOMATIZANDO AGENDAMENTOS</h3>
@@ -157,9 +187,8 @@
             </tr>
           </tbody>
         </table>
-        <a onclick="handleDiv(3)" class="btn-cadastrar">Cadastrar</a>
+        <button class="btn-cadastrar">Cadastrar</button>
         <a onclick="handleDiv(2)" class="btn-voltar">Voltar</a>
-      </div>
-    </div>
+    </form>
   </body>
 </html>
